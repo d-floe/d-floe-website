@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Signika+Negative:wght@400;600;700&family=Source+Code+Pro:wght@400;700&display=swap";
 
 html {
     font-size: 18px;
@@ -12,7 +13,11 @@ body {
     background-position: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    display:flex;
+    justify-content: center;
+  align-items: center;
 }
 
 
@@ -27,18 +32,15 @@ body {
 .logo {
         margin: auto;
         display:block;
-        width:95%;
+        width:100%;
         max-width: 50rem;
         border-radius: .5rem;
         box-shadow: rgb(0, 0, 0, 0.5) 0px 3px 4px;
 }
 
 header {
-    position: absolute;
-    top: 25%;
-    left: 0;
-    right: 0;
-    bottom: 25%;
+    padding: 0 0.8rem;
+    max-width: 50rem;
 }
 
 nav ul {
@@ -46,9 +48,10 @@ nav ul {
     flex-direction: row;
     justify-content: center;
     padding: 0;
-    margin: 1rem auto 0;
+    margin: 0;
     max-width: 50rem;
     flex-wrap: wrap;
+    gap:0.5rem;
 }
 
 nav a {
@@ -59,15 +62,43 @@ nav a {
     gap:0.5rem;
     color:white;
     text-decoration: none;
-    font-size: 1rem;
     fill:white;
     padding: 1rem 0;
     width: 9.5rem;
 }
 
+.navhead{
+    display:flex;
+    color:white;
+    padding:.8rem 0;
+    text-align:center;
+    align-items: center;
+    overflow:hidden;
+    font-size: 1.1rem;
+    text-transform:uppercase;
+
+}
+
+.navhead:before, .navhead:after {
+    content:'';
+    width:100%;
+    height: 0;
+    margin: 0.5rem;
+    border-bottom:lightgray solid 2px;
+    display:inline-block;
+    vertical-align:middle;
+}
+.navhead:before {
+  right: 100%;
+  -webkit-mask-image: -webkit-linear-gradient(left, transparent 10%, white);
+}
+.navhead:after {
+  left: 100%;
+  -webkit-mask-image: -webkit-linear-gradient(right, transparent 10%, white);
+}
+
 nav li {
     display:block;
-    margin: 0.25rem;
     background-color:#182033;
     transition: .1s ease-in;
     border-radius: .2rem;
