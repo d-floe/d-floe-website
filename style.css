@@ -34,7 +34,7 @@ body {
         display:block;
         width:100%;
         max-width: 50rem;
-        border-radius: .5rem;
+        border-radius: 0;
         box-shadow: rgb(0, 0, 0, 0.5) 0px 3px 4px;
 }
 
